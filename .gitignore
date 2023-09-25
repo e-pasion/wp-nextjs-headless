@@ -128,3 +128,11 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+#wordpress
+
+/wordpress/wp-content/uploads/
+/wordpress/wp-content/upgrade/
+/wordpress/wp-content/backup-db/
+/wordpress/wp-content/upgrade/
