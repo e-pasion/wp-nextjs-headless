@@ -5,11 +5,12 @@ import { ApolloNextAppProvider, NextSSRInMemoryCache, SSRMultipartLink,NextSSRAp
 
 function makeClient() {
   const httpLink = new HttpLink({
-      uri: `${process.env.PUBLIC_WORDPRESS_API_URL}`,
+      uri: `http://localhost/wp/wordpress/graphql`,
   });
 
   return new NextSSRApolloClient({
     cache: new NextSSRInMemoryCache(),
+    connectToDevTools:true,
     link:
       typeof window === "undefined"
         ? ApolloLink.from([
@@ -19,6 +20,7 @@ function makeClient() {
             httpLink,
           ])
         : httpLink,
+
   });
 }
 

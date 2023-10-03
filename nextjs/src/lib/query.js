@@ -1,9 +1,12 @@
 import { gql } from "@apollo/client";
 
-export const paginatedPost=  gql` query GetPaginatedPosts {
-    posts {
+export const paginatedPost = gql`
+  query GetPaginatedPosts($categoryName: String, $offset: Int!, $size: Int!) {
+    posts(
+      where: { offsetPagination: { offset: $offset, size: $size }, 
+      categoryName: $categoryName}) {
       nodes {
-        id
+        slug
         title
         categories {
           nodes {
@@ -17,5 +20,33 @@ export const paginatedPost=  gql` query GetPaginatedPosts {
           }
         }
       }
+      pageInfo {
+        offsetPagination {
+          hasMore
+          hasPrevious
+          total
+        }
+      }
     }
-  }`
+  }
+`;
+
+export const getCategories= gql`
+query getCategories {
+  categories {
+    nodes {
+      id
+      name
+    }
+  }
+}
+`
+
+export const getPostBySlug = gql`
+query getPostBySlug($slug: ID!) {
+  post(idType: SLUG, id: $slug) {
+    title
+    content
+  }
+}
+`
