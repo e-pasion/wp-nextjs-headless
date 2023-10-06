@@ -1,11 +1,10 @@
 import ReactPaginate from "react-paginate";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs"; // icons form react-icons
-
+import Image from 'next/image';
 function Pagination({ currentPage,handlePageChange,pageCount }) {
   return (
     <ReactPaginate
-        previousLabel={<BsArrowLeft />}
-        nextLabel={<BsArrowRight />}
+        previousLabel={<Image src={"/arrow.svg"} width={15} height={15}/>}
+        nextLabel={<Image src={"/arrow.svg"} className="rotate-180" width={15} height={15}/>}
         breakLabel={"..."}
         containerClassName={
           "mt-10 flex justify-center space-x-2 text-gray-700 font-semibold"

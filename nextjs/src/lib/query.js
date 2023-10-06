@@ -35,8 +35,8 @@ export const getCategories= gql`
 query getCategories {
   categories {
     nodes {
-      id
       name
+      slug
     }
   }
 }

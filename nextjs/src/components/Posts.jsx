@@ -3,8 +3,7 @@ import { paginatedPost, getCategories } from "@/lib/query";
 import Post from "./Post";
 import Loading from "./Loading";
 import Pagination from "./Pagination";
-import { LuNewspaper } from "react-icons/lu"; // icons form react-icons
-import { PiSquaresFourThin } from "react-icons/pi"; // icons form react-icons
+
 import { useEffect, useState } from "react";
 import { useQuery } from "@apollo/client";
 export const revalidate = 5;
@@ -47,13 +46,13 @@ function Posts() {
     <div className="bg-slate-50 p-11">
       <div className="flex flex-col sm:flex-row justify-between mb-8">
         <div className="mb-8 flex space-x-4 justify-center">
-          <LuNewspaper size={35} color="yellowgreen" />
+          
           <h1 className="text-blue-900 text-3xl font-bold">Infórmate Efigas</h1>
         </div>
         <div className="flex justify-end">
           <div className="w-52 h-10 bg-white rounded-lg border border-gray-400 flex text-gray-500">
             <div className="h-full w-1/2 flex justify-center items-center space-x-1">
-              <PiSquaresFourThin size={20} />
+              
               <p>Mostrar: </p>
             </div>
             <select
@@ -65,7 +64,7 @@ function Posts() {
               {!categoryLoading &&
                 categoryData.categories.nodes.map((category) => {
                   return (
-                    <option key={category.id} value={category.name}>
+                    <option key={category.slug} value={category.slug}>
                       {category.name}
                     </option>
                   );
