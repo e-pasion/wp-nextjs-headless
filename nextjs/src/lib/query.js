@@ -50,3 +50,22 @@ query getPostBySlug($slug: ID!) {
   }
 }
 `
+
+export const getModal= gql`
+query getModal {
+  modal(id: "modal-inicial", idType: SLUG) {
+    title
+    modalFields {
+      imagen {
+        link
+      }
+      texto1
+      texto2
+      texto3
+      texto4
+      texto5
+      textoBoton
+    }
+  }
+}
+`

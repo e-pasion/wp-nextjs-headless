@@ -95,11 +95,11 @@ function Posts() {
         )}
       </div>
 
-      <Pagination
+      {/* <Pagination
         currentPage={currentPage}
         handlePageChange={handlePageChange}
         pageCount={pageCount}
-      />
+      /> */}
     </div>
   );
 }
