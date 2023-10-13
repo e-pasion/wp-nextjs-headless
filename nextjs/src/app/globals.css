@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.active-button{
-    background-color: #b8bf01;
-    color: white;
-}
+.active-button{background-color: #b8bf01;color: white;}
+.popup-shadow {box-shadow: inset 55px 5px 80px 40px #006ecc;}
 
-
-.container {
-    position: relative;
-}
-
-/* .block {
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    top: 0px;
-    box-shadow: inset -10px -10px 10px 20px ;
-    @apply bg-blue-500;
-} */

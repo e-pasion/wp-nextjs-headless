@@ -1,14 +1,21 @@
-"use client"
-import PopUp from "@/components/PopUp";
+"use client";
+import Popup from "@/components/Popup";
 import Posts from "@/components/Posts";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Home() {
-let [showPopup,setShowPopUp]=useState(true);
+  const [showPopup, setShowPopUp] = useState(false);
+
+  useEffect(() => {
+    if (!localStorage.getItem("popupShow")) {
+      setShowPopUp(true);
+      localStorage.setItem("popupShow", "true");
+    }
+  },[]);
 
   return (
-    <div >
-      { showPopup && <PopUp close={()=>setShowPopUp(false)}/>}
-      <Posts/>
+    <div>
+      {showPopup && <Popup close={() => setShowPopUp(false)} />}
+      <Posts />
     </div>
   );
 }
