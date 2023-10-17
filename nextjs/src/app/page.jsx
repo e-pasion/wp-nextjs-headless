@@ -15,6 +15,14 @@ export default function Home() {
   return (
     <div>
       {showPopup && <Popup close={() => setShowPopUp(false)} />}
+
+      <div className="blue-background w-full h-[39rem]">
+
+      </div>
+
+
+
+
       <Posts />
     </div>
   );

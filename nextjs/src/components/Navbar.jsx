@@ -3,9 +3,9 @@ import Link from "next/link"
 
 function Navbar() {
   return (
-    <div className="text-white text-xs">
+    <div className="text-white text-xs lg:text-sm">
 
-      <nav className="bg-blue-900 w-full py-2  flex justify-center items-center md:justify-between px-2">
+      <nav className="bg-blue-1 w-full py-[.8rem]  flex justify-center items-center md:justify-between px-2 lg:text-sm font-light">
         <div className="w-full justify-center md:justify-start md:w-1/3 space-x-1 lg:space-x-2 flex">
           <p className=" whitespace-nowrap">¡Paga aqui tu factura!</p>
           <p>|</p>
@@ -17,7 +17,7 @@ function Navbar() {
         </div>
 
         <div className="hidden md:flex w-1/3 justify-end"> 
-          <button className="bg-red-600 rounded-full py-1 px-2">
+          <button className="bg-red-500 rounded-full py-[0.2rem] px-3">
             <p>Simula tu credito Brilla</p>
           </button>
         </div>
@@ -25,26 +25,26 @@ function Navbar() {
       </nav>
 
 
-<nav className="bg-blue-800 shadow-xl">
-    <div className="flex flex-wrap justify-between items-center w-full p-2">
+<nav className="blue-background shadow-xl ">
+    <div className="flex flex-wrap justify-between items-center w-full py-2 px-3">
       <div className="w-1/3">
           <Image src={"/icons/menu-white.svg"} className="md:hidden" alt="menu" width={25} height={25}/>
-          <div className="hidden md:flex w-[17rem] space-x-2 h-10 border rounded-full items-center relative font-light">
-      
-            <select className="bg-blue-800 flex items-center text-[0.68rem] h-full ml-4 outline-none" id="">
-              <option value="0">En todo el sitio</option>
-              <option value="1">En los posts </option>
+
+          <div className="hidden md:flex w-[17rem] lg:w-80 space-x-2 h-12 border rounded-full items-center relative font-light">
+            <select className="bg-transparent flex items-center text-xs h-full ml-4 outline-none" id="">
+              <option className="bg-blue-900" value="0">En todo el sitio</option>
+              <option className="bg-blue-900" value="1">En los posts </option>
             </select>
             <p>|</p>
             <input type="text" className="bg-transparent w-24 placeholder-white outline-none " placeholder="Buscar..." />
             <Image src={"/icons/lupa.svg"} className="absolute right-4 top-2" alt="menu" width={20} height={20}/>
-
           </div>
+
       </div>
 
       <div className="w-1/3 flex justify-center">
         <Link href={'/'}>
-          <Image src={"/img/Efigas-logo.webp"} alt="logo" width={130} height={130}/>
+          <Image src={"/logos/logo-efigas-color.svg"} alt="logo" width={200} height={200}/>
         </Link>
       </div>
 
@@ -61,22 +61,58 @@ function Navbar() {
     </div>
 </nav>
 
-<nav className="bg-white w-full hidden md:flex">
-    <button className="flex bg-blue-900 px-4 rounded-md py-2 space-x-1 h-8">
-      <Image src={"/icons/four-squares.png"} alt="squares" width={15} height={15} ></Image>
-      <select className="bg-blue-900">
-        <option value="">Mas información</option>
-      </select>
+<nav className="bg-white w-full hidden md:flex items-center py-3 px-2 justify-between">
+    <button className="flex items-center bg-blue-900 px-3 rounded-md py-[.6rem] space-x-1">
+      <Image src={"/icons/four-squares.png"} alt="squares" width={13} height={13} ></Image>
+      <p className="font-extralight">Mas información</p>
+      <Image src={"/icons/dropdown.svg"} className="filter invert" alt="down" width={15} height={15} ></Image>
     </button>
 
-    <div>
-      <ul>
-        <li className="flex">
-        <Image src={"/icons/home.svg"} className="fill-black" alt="squares" width={20} height={20} ></Image>
-        <p className="text-blue-900">Hogar</p>
-        <Image src={"/icons/down.png"} className="fill-blue-500" alt="squares" width={15} height={15} ></Image>
-        </li>
-      </ul>
+    <div className="flex space-x-4 font-bold">
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/home.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-blue-900 ml-1">Hogar</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/home.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-blue-900 ml-1">Comercio</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/home.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-blue-900 ml-1">Industrias</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/home.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-blue-900 ml-1">Constructoras</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/home.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-blue-900 ml-1">Vehicular</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+
+        <div className="flex justify-center items-center cursor-pointer">
+          <Image src={"/icons/leaf.svg"} className="icon-cyan" alt="home" width={15} height={15} ></Image>
+          <p className="text-green-1 ml-1">Sostenibilidad</p>
+          <Image src={"/icons/dropdown.svg"} className="icon-cyan" alt="down" width={15} height={15} ></Image>
+        </div>
+    </div>
+
+    <div className="flex">
+      <Image src={"/icons/portfolio.svg"} className="icon-blue" alt="portofolio" width={34} height={34} ></Image>
+      <div className="text-right">
+        <p className="text-xl text-green-1 font-bold">Oficina virtual</p>
+        <p className="text-gray-400 font-bold">Atención en línea</p>
+
+      </div>
     </div>
 
 

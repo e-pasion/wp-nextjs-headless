@@ -4,4 +4,9 @@
 
 .active-button{background-color: #b8bf01;color: white;}
 .popup-shadow {box-shadow: inset 55px 5px 80px 40px #006ecc;}
+.blue-background { background-image: url('/img/blue-background.jpg'); background-repeat: no-repeat; background-size: cover;}
 
+
+/* icon colors */
+.icon-blue{filter: invert(23%) sepia(67%) saturate(779%) hue-rotate(172deg) brightness(95%) contrast(88%);}
+.icon-cyan{filter: invert(68%) sepia(15%) saturate(1650%) hue-rotate(146deg) brightness(93%) contrast(77%);}
