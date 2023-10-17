@@ -51,5 +51,4 @@ function PopUp({close}) {
   )
 }
 
-
 export default PopUp
