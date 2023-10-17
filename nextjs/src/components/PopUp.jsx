@@ -14,8 +14,7 @@ function PopUp({close}) {
   
   if(!loading) console.log(data);
   return (
-    <div className="w-full h-screen absolute z-10">
-        <div className="h-full w-full fixed bg-black bg-opacity-70 flex justify-center">
+        <div className="h-full w-full fixed inset-0 overflow-y-auto z-10 bg-black bg-opacity-70 flex justify-center">
             <div className="bg-[#006ecc] rounded-3xl w-[40rem] h-[31rem] mt-[5rem] relative mx-10 ">
 
             <button type="button" onClick={close} className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center absolute top-5 right-7 z-30">
@@ -46,8 +45,6 @@ function PopUp({close}) {
   }     
             </div>
         </div>
-
-    </div>
   )
 }
 
